@@ -50,12 +50,14 @@ export class Progressive extends React.Component<IProgressive> {
       Animated.timing(this.animation, {
         duration: DURATION,
         isInteraction,
-        toValue: END_VALUE
+        toValue: END_VALUE,
+        useNativeDriver: false
       }),
       Animated.timing(this.animation, {
         duration: DURATION,
         isInteraction,
-        toValue: START_VALUE
+        toValue: START_VALUE,
+        useNativeDriver: false
       })
     ]).start(e => {
       if (e.finished) {

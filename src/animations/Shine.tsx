@@ -42,7 +42,8 @@ export class Shine extends React.Component<IShine> {
     Animated.timing(this.animation, {
       duration: this.props.duration || 750,
       isInteraction,
-      toValue: END_VALUE
+      toValue: END_VALUE,
+      useNativeDriver: false
     }).start(e => {
       if (e.finished) {
         this.start();
